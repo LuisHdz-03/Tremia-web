@@ -1,21 +1,23 @@
-import { useState } from 'react'
-import styled from 'styled-components'
-import Header from '../components/Header'
-import Sidebar from '../components/Sidebar'
-import ChatWidget from '../components/ChatWidget'
-import ForumsHeader from '../components/foros/ForumsHeader'
-import ForumsList from '../components/foros/ForumsList'
-import MembersAside from '../components/foros/MembersAside'
-import CommentsPanel from '../components/forum/CommentsPanel'
+import { useState } from "react";
+import styled from "styled-components";
+import Header from "../components/Header";
+import Sidebar from "../components/Sidebar";
+import ChatWidget from "../components/ChatWidget";
+import ForumsHeader from "../components/foros/ForumsHeader";
+import ForumsList from "../components/foros/ForumsList";
+import MembersAside from "../components/foros/MembersAside";
 
 export default function Foros() {
-  const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
 
   return (
     <Container>
       <Header />
       <BodyLayout>
-        <Sidebar isCollapsed={sidebarCollapsed} onToggle={() => setSidebarCollapsed(!sidebarCollapsed)} />
+        <Sidebar
+          isCollapsed={sidebarCollapsed}
+          onToggle={() => setSidebarCollapsed(!sidebarCollapsed)}
+        />
         <Content>
           <Grid>
             <Main>
@@ -25,9 +27,6 @@ export default function Foros() {
               <CenterList>
                 <ForumsList />
               </CenterList>
-              <CommentsCard>
-                <CommentsPanel />
-              </CommentsCard>
             </Main>
             <Aside>
               <MembersAside />
@@ -37,7 +36,7 @@ export default function Foros() {
       </BodyLayout>
       <ChatWidget />
     </Container>
-  )
+  );
 }
 
 const Container = styled.main`
@@ -45,22 +44,23 @@ const Container = styled.main`
   flex-direction: column;
   height: 100vh;
   overflow: hidden;
-`
+`;
 
 const BodyLayout = styled.div`
   display: flex;
   flex: 1;
   overflow: hidden;
-`
+`;
 
 const Content = styled.div`
   flex: 1;
-  padding: 0 ${({ theme }) => theme.spacing(6)} ${({ theme }) => theme.spacing(6)};
+  padding: 0 ${({ theme }) => theme.spacing(6)}
+    ${({ theme }) => theme.spacing(6)};
   overflow-y: auto;
   background: ${({ theme }) => theme.colors.gray50};
   /* permite sticky interno */
   position: relative;
-`
+`;
 
 const Grid = styled.div`
   display: flex;
@@ -68,7 +68,7 @@ const Grid = styled.div`
   gap: ${({ theme }) => theme.spacing(6)};
   /* margen inferior para no tapar el widget de mensajes */
   margin-bottom: ${({ theme }) => theme.spacing(10)};
-`
+`;
 
 const Main = styled.div`
   min-height: 0; /* necesario para layouts con overflow */
@@ -76,8 +76,8 @@ const Main = styled.div`
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing(4)};  
-`
+  gap: ${({ theme }) => theme.spacing(4)};
+`;
 
 const StickyHeader = styled.div`
   position: sticky;
@@ -90,12 +90,12 @@ const StickyHeader = styled.div`
   padding-bottom: ${({ theme }) => theme.spacing(4)};
   /* Separador inferior */
   border-bottom: 1px solid ${({ theme }) => theme.colors.gray200};
-`
+`;
 
 const CenterList = styled.div`
   /* el scroll vive en Content, aquí solo el contenido */
   margin-top: ${({ theme }) => theme.spacing(2)};
-`
+`;
 
 const Aside = styled.div`
   position: sticky;
@@ -104,8 +104,8 @@ const Aside = styled.div`
   min-width: 320px;
   flex: 0 0 320px;
   margin-top: ${({ theme }) => theme.spacing(6)};
-`
+`;
 
 const CommentsCard = styled.div`
   margin-top: ${({ theme }) => theme.spacing(4)};
-`
+`;
