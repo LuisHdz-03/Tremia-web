@@ -4,7 +4,6 @@ import {
   getSociosUsuariosApi,
   getOrganizacionUsuariosApi,
 } from "@/api/usuarios";
-import type { SocioUsuario, OrganizacionUsuario } from "@/api/usuarios";
 
 export default function MembersAside() {
   const [miembros, setMiembros] = useState<

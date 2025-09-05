@@ -105,7 +105,3 @@ const Aside = styled.div`
   flex: 0 0 320px;
   margin-top: ${({ theme }) => theme.spacing(6)};
 `;
-
-const CommentsCard = styled.div`
-  margin-top: ${({ theme }) => theme.spacing(4)};
-`;

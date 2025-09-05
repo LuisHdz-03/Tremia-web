@@ -15,7 +15,7 @@ export default function ForumPostCard({ post }: { post: ForumPost }) {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    if (showComments) {
+    if (showComments && comentarios.length === 0) {
       setLoading(true);
       getComentariosForoApi(String(post.id))
         .then(setComentarios)
@@ -97,7 +97,9 @@ export default function ForumPostCard({ post }: { post: ForumPost }) {
             onClick={() => setShowComments((v) => !v)}
           >
             <FiMessageCircle size={18} />
-            <span>{post.descripcion}</span>
+            <span>
+              {showComments ? "Ocultar comentarios" : "Mostrar comentarios"}
+            </span>
           </CommentsButton>
           <ReactionButton aria-label="Me gusta">
             <FiHeart size={18} />
