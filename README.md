@@ -11,11 +11,11 @@ Un cliente web responsivo y de alto rendimiento desarrollado con **React, TypeSc
 
 ## Módulos Core del Sistema
 
-*   ** Asistente Virtual con IA Integrado:** Módulo inteligente (`ChatWidget`) interconectado con un agente de IA (`src/api/asistente.ts`) especializado en responder consultas sobre el ecosistema del Club, servicios disponibles y capacidades tecnológicas de los miembros.
-*   ** Autenticación y Estado con Firebase:** Sistema de control de acceso seguro y persistencia de sesión global robusta administrada a través de los servicios de **Firebase Auth** y React Context API.
-*   ** Foros de Innovación Abierta y Comunidades:** Espacios colaborativos centralizados (`src/pages/Foros.tsx`) para la publicación de retos tecnológicos compartidos, convocatorias institucionales y discusiones en comunidad.
-*   ** Matchmaking de Socios y Proyectos:** Vistas estructuradas (`src/pages/Socios.tsx`, `src/pages/Proyectos.tsx`) para erradicar la dificultad de vinculación entre empresarios, desarrolladores e innovadores, acelerando la toma de decisiones conjuntas[cite: 3].
-*   ** Panel Analítico y Estadísticas:** Dashboard de administración con tarjetas de métricas dinámicas (`StatCard`) para visualizar el crecimiento, interacciones de usuarios y tracción de los proyectos dentro del Club[cite: 3].
+*  ** Asistente Virtual con IA Integrado:** Módulo inteligente (`ChatWidget`) interconectado con un agente de IA (`src/api/asistente.ts`) especializado en responder consultas sobre el ecosistema del Club, servicios disponibles y capacidades tecnológicas de los miembros.
+*  ** Autenticación y Estado con Firebase:** Sistema de control de acceso seguro y persistencia de sesión global robusta administrada a través de los servicios de **Firebase Auth** y React Context API.
+*  ** Foros de Innovación Abierta y Comunidades:** Espacios colaborativos centralizados (`src/pages/Foros.tsx`) para la publicación de retos tecnológicos compartidos, convocatorias institucionales y discusiones en comunidad.
+*  ** Matchmaking de Socios y Proyectos:** Vistas estructuradas (`src/pages/Socios.tsx`, `src/pages/Proyectos.tsx`) para erradicar la dificultad de vinculación entre empresarios, desarrolladores e innovadores, acelerando la toma de decisiones conjuntas[cite: 3].
+*  ** Panel Analítico y Estadísticas:** Dashboard de administración con tarjetas de métricas dinámicas (`StatCard`) para visualizar el crecimiento, interacciones de usuarios y tracción de los proyectos dentro del Club[cite: 3].
 
 ---
 
