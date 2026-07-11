@@ -1,105 +1,44 @@
-# React + TypeScript + Vite
+# Tremia Web - Plataforma de Integración Tecnológica e Inteligencia Empresarial
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Un cliente web responsivo y de alto rendimiento desarrollado con **React, TypeScript y Vite**, galardonado con el **3er Lugar General en el Innovation Fest 2025**. Esta plataforma fue diseñada como la solución definitiva a la problemática de fragmentación digital en el **Club Empresarial Tres Marías**, unificando la colaboración, visibilidad y escalabilidad de proyectos conjuntos mediante herramientas avanzadas de Inteligencia Artificial y persistencia en tiempo real.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Reconocimiento Especial
+*   **Tercer Lugar General (Innovation Fest 2025):** Premiado en el área temática de *Administración y Finanzas* por resolver estratégicamente el aislamiento tecnológico entre socios comerciales, conectando talento local con inversionistas y promoviendo un networking digital efectivo.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Módulos Core del Sistema
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+*   ** Asistente Virtual con IA Integrado:** Módulo inteligente (`ChatWidget`) interconectado con un agente de IA (`src/api/asistente.ts`) especializado en responder consultas sobre el ecosistema del Club, servicios disponibles y capacidades tecnológicas de los miembros.
+*   ** Autenticación y Estado con Firebase:** Sistema de control de acceso seguro y persistencia de sesión global robusta administrada a través de los servicios de **Firebase Auth** y React Context API.
+*   ** Foros de Innovación Abierta y Comunidades:** Espacios colaborativos centralizados (`src/pages/Foros.tsx`) para la publicación de retos tecnológicos compartidos, convocatorias institucionales y discusiones en comunidad.
+*   ** Matchmaking de Socios y Proyectos:** Vistas estructuradas (`src/pages/Socios.tsx`, `src/pages/Proyectos.tsx`) para erradicar la dificultad de vinculación entre empresarios, desarrolladores e innovadores, acelerando la toma de decisiones conjuntas[cite: 3].
+*   ** Panel Analítico y Estadísticas:** Dashboard de administración con tarjetas de métricas dinámicas (`StatCard`) para visualizar el crecimiento, interacciones de usuarios y tracción de los proyectos dentro del Club[cite: 3].
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Stack Tecnológico
 
-## Uso de esta plantilla (Routing + styled-components)
+*   **Core Frontend:** React.js (Vite Core para recargas de componentes instantáneas HMR)[cite: 3]
+*   **Lenguaje:** TypeScript (Tipado estricto para asegurar la consistencia en el manejo de datos y flujos asíncronos)[cite: 3]
+*   **Arquitectura de Estilos:** Styled Components (Sistema de tokens centralizado para asegurar consistencia en colores, espaciados y sombras corporativas)[cite: 3]
+*   **Ecosistema Cloud & Backend Integration:** Firebase (Autenticación y Sesiones) + Axios para consumo de servicios RESTful externos[cite: 3]
+*   **Enrutamiento:** React Router Dom (`BrowserRouter` con protección de rutas por roles)[cite: 3]
 
-1. Instalar dependencias
+---
 
-```bash
-npm install
-```
+## Estructura de la Plataforma Web
 
-2. Ejecutar el entorno de desarrollo
+El código fuente está diseñado bajo un patrón estricto de separación de responsabilidades para agilizar la maquetación bajo presión:
 
-```bash
-npm run dev
-```
-
-3. Estructura relevante
-
-- `src/main.tsx`: monta el `ThemeProvider`, `GlobalStyle` y `BrowserRouter`.
-- `src/App.tsx`: define rutas; redirige `/` a `/login`.
-- `src/pages/Login.tsx`: pantalla principal de Login con `styled-components`.
-- `src/styles/theme.ts`: tema centralizado (colores, radios, spacing, sombras).
-- `src/styles/global.ts`: estilos globales.
-- `src/styles/styled.d.ts`: tipado de `DefaultTheme`.
-
-4. Limpieza aplicada
-
-- Eliminadas referencias al template de Vite (logos, CSS base) y favicon por defecto.
-- Si aún existen archivos como `src/App.css`, `src/index.css`, `src/assets/react.svg` o `public/vite.svg`, puedes borrarlos.
-
-5. Añadir nuevas pantallas/rutas
-
-- Crea un archivo en `src/pages/Nombre.tsx` y añade una ruta en `src/App.tsx`:
-
-```tsx
-<Route path="/nombre" element={<Nombre />} />
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+```text
+src/
+├── app/               # Manejo y definición de la malla de enrutamiento (App.tsx)[cite: 3]
+├── auth/              # Inicialización de Firebase y servicios de sesión asíncronos[cite: 3]
+├── api/               # Capa de servicios para consumo de endpoints (IA, foros, mensajes, retos)[cite: 3]
+├── components/        # Componentes atómicos de UI (ChatWidget, Sidebar, StatCards, formularios)[cite: 3]
+├── context/           # Control del estado global de autenticación del usuario[cite: 3]
+├── pages/             # Pantallas de negocio (Dashboard, Foros, Proyectos, Socios, Mensajes)[cite: 3]
+└── styles/            # Tokens de diseño centralizados (theme.ts) y estilos CSS globales[cite: 3]
